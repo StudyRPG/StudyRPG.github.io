@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10182c">
+  <meta name="description" content="스터디 RPG – 공부시간·진도관리. 오늘의 학습 목표와 진도, 공부시간, 공부달력, 캐릭터 성장으로 공부를 꾸준히 이어가는 학습관리 앱입니다.">
+  <title>스터디 RPG – 공부시간·진도관리 | Study RPG</title>
+  <style>
+    :root{color-scheme:dark;--ink:#f6f8ff;--muted:#b4c1dc;--navy:#0c1325;--panel:#16233e;--line:rgba(178,206,255,.18);--blue:#68bcff;--mint:#64eac7;--gold:#ffcc70}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 90% 50% at 85% 2%,#253e69 0%,transparent 65%),radial-gradient(ellipse 70% 50% at 0% 50%,#162a44 0%,transparent 68%),var(--navy);font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);line-height:1.75}
+    a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px} .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    header{position:sticky;top:0;z-index:2;background:rgba(12,19,37,.90);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:1.08rem;font-weight:800;text-decoration:none;letter-spacing:.02em}.badge{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;color:#06172d;background:linear-gradient(135deg,var(--mint),var(--blue));font-weight:900;font-size:21px;box-shadow:0 5px 25px rgba(100,234,199,.16)}nav{display:flex;align-items:center;gap:24px}nav a{text-decoration:none;color:var(--muted);font-size:.94rem}nav a:hover{color:#fff}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:58px;align-items:center;padding:100px 0 92px}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:99px;border:1px solid rgba(100,234,199,.4);background:rgba(100,234,199,.08);color:var(--mint);font-weight:700;font-size:.84rem;letter-spacing:.04em}
+    h1{font-size:clamp(2.5rem,5.6vw,4.7rem);line-height:1.18;letter-spacing:-.05em;margin:22px 0}h1 span{display:block;color:var(--blue)}.lead{color:var(--muted);font-size:clamp(1.05rem,2.1vw,1.23rem);max-width:640px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:13px;padding:12px 22px;border:1px solid rgba(104,188,255,.48);background:#234776}.btn.alt{background:transparent;color:var(--blue)}.btn:hover{filter:brightness(1.1)}.meta{color:var(--muted);font-size:.84rem;margin-top:18px}
+    .showcase{border-radius:27px;border:1px solid rgba(166,195,246,.23);background:linear-gradient(160deg,rgba(43,72,118,.88),rgba(18,32,59,.95));padding:29px;box-shadow:0 25px 70px rgba(0,0,0,.23);transform:rotate(1.5deg)}.label{font-size:.8rem;color:var(--mint);font-weight:750;letter-spacing:.07em}.showcase h2{font-size:1.55rem;margin:6px 0 18px;letter-spacing:-.04em}.today{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.stat{border:1px solid var(--line);background:rgba(6,15,29,.55);padding:18px 15px;border-radius:16px}.stat strong{display:block;font-size:1.32rem;color:var(--ink)}.stat span{display:block;font-size:.8rem;color:var(--muted)}.progress{background:rgba(6,15,29,.55);margin-top:13px;border-radius:16px;padding:16px;border:1px solid var(--line)}.progress-head{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem;margin-bottom:10px}.track{height:10px;border-radius:20px;background:#30415e;overflow:hidden}.fill{height:100%;width:64%;background:linear-gradient(90deg,var(--mint),var(--blue));border-radius:20px}.preview-note{font-size:.77rem;color:var(--muted);text-align:center;margin:16px 0 0}
+    section.features{padding:60px 0 90px}.section-head{margin:0 0 12px;font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.04em}.section-sub{margin:0 0 28px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:20px;padding:23px 19px;background:linear-gradient(180deg,rgba(26,43,71,.9),rgba(17,31,56,.88))}.card .icon{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:rgba(104,188,255,.13);color:var(--blue);font-size:1.37rem;font-weight:900;margin-bottom:18px}.card h3{margin:0 0 8px;font-size:1.12rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+    .notice{border:1px solid rgba(100,234,199,.28);border-radius:22px;padding:25px 30px;background:rgba(100,234,199,.06);margin-bottom:82px}.notice h2{font-size:1.14rem;margin:0 0 7px;color:var(--mint)}.notice p{margin:0;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:.86rem}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer strong{color:var(--ink)}
+    @media(max-width:950px){.hero{grid-template-columns:1fr;padding:72px 0 50px;gap:30px}.showcase{max-width:530px;transform:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:530px){.wrap{width:min(1120px,calc(100% - 28px))}nav{gap:12px}nav a{font-size:.82rem}.hero{padding-top:48px}h1{font-size:2.5rem}.cards{grid-template-columns:1fr}.today{gap:8px}.stat{padding:14px}.showcase{padding:18px}.notice{padding:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav"><a href="#top" class="brand" aria-label="Study RPG 홈페이지 맨 위로"><span class="badge" aria-hidden="true">S</span><span>Study RPG</span></a><nav aria-label="주요 메뉴"><a href="#features">주요 기능</a><a href="#availability">서비스 안내</a></nav></div></header>
+<main id="top">
+  <div class="wrap hero">
+    <div><span class="eyebrow">STUDY × PROGRESS × RPG</span><h1>오늘의 공부를<br><span>성장의 기록으로.</span></h1><p class="lead"><strong>스터디 RPG – 공부시간·진도관리</strong>는 목표일까지의 학습 진도를 관리하고, 공부시간과 달력, 순위, 캐릭터 성장으로 꾸준한 학습을 돕는 Android 앱입니다.</p><div class="actions"><a href="#features" class="btn">기능 살펴보기</a><a href="#availability" class="btn alt">이용 안내</a></div><p class="meta">공부시간·진도관리 · Android · Study RPG</p></div>
+    <div class="showcase" aria-label="Study RPG 기능 소개 예시"><span class="label">MY STUDY DASHBOARD</span><h2>조금씩 쌓이는 오늘의 기록</h2><div class="today"><div class="stat"><span>학습 목표</span><strong>오늘의 분량</strong></div><div class="stat"><span>진도 관리</span><strong>회독 · 페이지</strong></div><div class="stat"><span>공부 습관</span><strong>시간 기록</strong></div><div class="stat"><span>성장 경험</span><strong>RPG 캐릭터</strong></div></div><div class="progress"><div class="progress-head"><span>목표 진도 관리</span><span>계획과 기록 연결</span></div><div class="track" aria-hidden="true"><div class="fill"></div></div></div><p class="preview-note">화면은 기능을 설명하기 위한 개념 구성입니다.</p></div>
+  </div>
+  <section id="features" class="wrap features"><h2 class="section-head">공부 흐름을 하나로</h2><p class="section-sub">계획부터 실천, 확인까지 이어지는 학습관리 기능</p><div class="cards">
+    <article class="card"><span class="icon" aria-hidden="true">✓</span><h3>오늘공부</h3><p>학습 목표일과 진도를 기반으로 오늘 진행할 분량을 확인합니다.</p></article>
+    <article class="card"><span class="icon" aria-hidden="true">◷</span><h3>공부시간 기록</h3><p>공부 시작·중지와 집중시간을 기록하고 학습 리듬을 확인합니다.</p></article>
+    <article class="card"><span class="icon" aria-hidden="true">▦</span><h3>달력과 순위</h3><p>공부한 날짜를 돌아보고 다른 학습자와의 공부시간 순위를 살펴봅니다.</p></article>
+    <article class="card"><span class="icon" aria-hidden="true">✦</span><h3>캐릭터 성장</h3><p>공부한 시간을 성취감 있는 RPG 성장 경험으로 연결합니다.</p></article>
+  </div></section>
+  <section id="availability" class="wrap notice"><h2>서비스 및 문의 안내</h2><p>Study RPG는 Android용 학습관리 앱입니다. 사용 가능 여부와 테스트 참여에 관한 안내는 Google Play의 앱 정보 또는 앱 내 ‘질문과 답변(Q&amp;A)’ 메뉴에서 확인해 주세요.</p></section>
+</main>
+<footer><div class="wrap"><div><strong>스터디 RPG – 공부시간·진도관리</strong><br>Study RPG Official Website</div><div>© 2026 Study RPG. All rights reserved.</div></div></footer>
+</body></html>
